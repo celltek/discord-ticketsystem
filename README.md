@@ -46,3 +46,39 @@ Ein moderner Discord-Bot zur Ticketverwaltung mit integrierter Web-Oberfläche u
 - [TailwindCSS](https://tailwindcss.com/)
 - [Passport + Discord OAuth2](http://www.passportjs.org/)
 - Plain JSON / JSONL-Dateien (statt Datenbank)
+
+## 📁 Struktur
+
+```bash
+bot.js           # Discord-Bot inkl. Ticket- und Button-Logik
+web.js           # Express-Webserver mit WebUI und Auth
+greeting.js      # Gruß-Funktion für personalisierte Einstiegstexte
+tickets.json     # Aktive Tickets
+audit.log.jsonl  # Archivierte Tickets mit Metadaten
+public/
+  └── index.html # Übersicht aktive Tickets
+  └── audit.html # Übersicht geschlossene Tickets
+```
+
+## 🛡 Voraussetzungen
+
+- Node.js ≥ 18
+- Discord Bot-Token
+- Discord App mit aktivierter OAuth2 (Redirect URI: `/auth/callback`)
+- `.env` mit:
+
+```env
+DISCORD_CLIENT_ID=
+DISCORD_CLIENT_SECRET=
+DISCORD_REDIRECT_URI=https://domain.xyz/auth/callback
+SESSION_SECRET=...
+GUILD_ID=
+MOD_ROLE_IDS=role1,role2
+```
+
+## 🚀 Start
+
+```bash
+npm install
+node bot.js
+```
