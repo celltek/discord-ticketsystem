@@ -1,3 +1,7 @@
+```diff
+- Source files are not published
+```
+
 # 🎫 Discord Ticket Bot mit WebUI
 
 Ein moderner Discord-Bot zur Ticketverwaltung mit integrierter Web-Oberfläche und Audit-Logging.
