@@ -14,7 +14,7 @@ Ein moderner Discord-Bot zur Ticketverwaltung mit integrierter Web-Oberfläche u
 - 🎙️ Sprachchannel-Erstellung (nur für berechtigte Rollen)
 - ✉️ Begrüßungstext beim Start (mit Saison- und Uhrzeit-basiertem Greeting)
 - 📎 Nachrichtenspeicherung mit Anhängen
-- ⏱ **Auto-Close nach Inaktivität** (z. B. 24h ohne Nachricht)
+- ⏱ **Auto-Close nach Inaktivität** (24h ohne Nachricht)
 - 🌐 WebUI mit:
   - Authentifizierung per Discord OAuth2
   - Ticket-Anzeige + Verlauf
