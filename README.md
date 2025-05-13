@@ -76,9 +76,10 @@ public/
 DISCORD_CLIENT_ID=
 DISCORD_CLIENT_SECRET=
 DISCORD_REDIRECT_URI=https://domain.xyz/auth/callback
-SESSION_SECRET=...
+SESSION_SECRET=
 GUILD_ID=
 MOD_ROLE_IDS=role1,role2
+TICKET_API_KEY=
 ```
 
 ## 🚀 Start
