@@ -20,6 +20,19 @@ Ein moderner Discord-Bot zur Ticketverwaltung mit integrierter Web-Oberfläche u
   - Ticket-Anzeige + Verlauf
   - Moderatoren-Schließen über Web
   - Audit-Log für alle geschlossenen Tickets
+ 
+## 🔒 Rollenrechte
+Nur User mit den Rollen in MOD_ROLE_IDS dürfen:
+- Tickets im Web einsehen
+- Tickets schließen (Web + Discord)
+- den Button „Ticket schließen“ klicken
+Voice-Channels können nur von Nutzern mit Rollen aus voiceSupportRoleIds erstellt werden.
+
+## ⏱ Auto-Close bei Inaktivität
+Ein Hintergrundprozess schließt Tickets automatisch, wenn:
+- seit der letzten Nachricht mehr als 24 Stunden vergangen sind
+- die Nachricht ⏱ Ticket wurde automatisch geschlossen wird in den Channel gepostet
+- Eintrag ins Auditlog erfolgt
 
 ## ⚙️ Technologien
 
@@ -42,7 +55,6 @@ public/
   └── index.html # Übersicht aktive Tickets
   └── audit.html # Übersicht geschlossene Tickets
 ```
-
 ## 🛡 Voraussetzungen
 
 - Node.js ≥ 18
@@ -58,14 +70,6 @@ SESSION_SECRET=...
 GUILD_ID=
 MOD_ROLE_IDS=role1,role2
 ```
-
-## ⏱ Auto-Close bei Inaktivität
-Ein Hintergrundprozess schließt Tickets automatisch, wenn:
-- seit der letzten Nachricht mehr als 24 Stunden vergangen sind
-- die Nachricht ⏱ Ticket wurde automatisch geschlossen wird in den Channel gepostet
-- Eintrag ins Auditlog erfolgt
-
-
 
 ## 🚀 Start
 
