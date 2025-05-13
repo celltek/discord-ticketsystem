@@ -6,6 +6,9 @@
 
 Ein moderner Discord-Bot zur Ticketverwaltung mit integrierter Web-Oberfläche und Audit-Logging.
 
+![image](https://github.com/user-attachments/assets/f6495386-a196-4e10-ba67-d42d1ac1b7bb)
+
+
 ## ✨ Features
 
 - 🎫 **Ticket-System in Discord**
