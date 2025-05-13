@@ -30,7 +30,19 @@ Setze den Key in .env als:
 ```
 TICKET_API_KEY=dein-geheimer-api-key
 ```
- 
+
+## 📋 GET /api/tickets
+Ruft alle offenen Tickets ab.
+
+## 📋 GET /api/tickets/:id
+Ruft ein einzelnes Ticket mit Verlauf & Anhängen ab. 
+
+## ❌ POST /api/tickets/:id/close
+Schließt ein Ticket per API (inkl. Kanal-/Voice-Channel-Löschung und Auditlog).
+- ✅ Ticket wird entfernt
+- 🔇 Discord-Channel wird gelöscht
+- 🗂️ Eintrag landet im audit.log.jsonl
+
 ## 🔒 Rollenrechte
 Nur User mit den Rollen in MOD_ROLE_IDS dürfen:
 - Tickets im Web einsehen
