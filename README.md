@@ -59,6 +59,14 @@ GUILD_ID=
 MOD_ROLE_IDS=role1,role2
 ```
 
+## ⏱ Auto-Close bei Inaktivität
+Ein Hintergrundprozess schließt Tickets automatisch, wenn:
+- seit der letzten Nachricht mehr als 24 Stunden vergangen sind
+- die Nachricht ⏱ Ticket wurde automatisch geschlossen wird in den Channel gepostet
+- Eintrag ins Auditlog erfolgt
+
+
+
 ## 🚀 Start
 
 ```bash
