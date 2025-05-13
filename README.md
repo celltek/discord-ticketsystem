@@ -6,37 +6,20 @@
 
 Ein moderner Discord-Bot zur Ticketverwaltung mit integrierter Web-Oberfläche und Audit-Logging.
 
-## ✅ Funktionen
+## 🚀 Features
 
-- **Ticket-Erstellung via Button**  
-  Benutzer können mit einem Klick ein Ticket eröffnen.  
-  Der Bot erstellt automatisch einen privaten Text-Channel unter einer definierten Kategorie.
-
-- **Begrüßung beim Ticketstart**  
-  Der Bot begrüßt den Nutzer im Ticket mit einer dynamischen, tageszeitabhängigen Nachricht.
-
-- **Anhänge und Nachrichtenverlauf**  
-  Alle Nachrichten im Ticket (inkl. Anhänge) werden automatisch in `tickets.json` gespeichert.
-
-- **Ticket schließen durch Moderatoren**  
-  Moderatoren (definiert über Rollen-ID) können Tickets im Discord via Button schließen.  
-  Dabei wird:
-  - das Ticket archiviert
-  - der Channel gelöscht
-  - ein Eintrag im `audit.log.jsonl` gespeichert
-
-- **WebUI (Node.js Express + Tailwind)**  
-  Ein geschützter Adminbereich (nur für Mods) bietet:
-  - Übersicht aller aktiven Tickets (`index.html`)
-  - Historie geschlossener Tickets (`audit.html`)
-  - Discord OAuth2-Login zur Authentifizierung
-  - Direkte Schließung von Tickets über das Webinterface
-
-- **Mehrrollen-Unterstützung**  
-  Mehrere Mod-Rollen können in der `.env` konfiguriert werden.
-
-- **Sicherheit**  
-  - Sessions und Berechtigungen werden geprüft und automatisch beendet bei fehlenden Rechten
+- 🎟️ Ticket-Erstellung per Button in festem Channel
+- 🧵 Neuer Textkanal pro Ticket (`ticket-xxxxx`)
+- 🛡️ Moderatoren-Schließen über Button (nur mit definierter Rolle)
+- 🎙️ Sprachchannel-Erstellung (nur für berechtigte Rollen)
+- ✉️ Begrüßungstext beim Start (mit Saison- und Uhrzeit-basiertem Greeting)
+- 📎 Nachrichtenspeicherung mit Anhängen
+- ⏱ **Auto-Close nach Inaktivität** (z. B. 24h ohne Nachricht)
+- 🌐 WebUI mit:
+  - Authentifizierung per Discord OAuth2
+  - Ticket-Anzeige + Verlauf
+  - Moderatoren-Schließen über Web
+  - Audit-Log für alle geschlossenen Tickets
 
 ## ⚙️ Technologien
 
