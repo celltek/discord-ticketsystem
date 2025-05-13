@@ -21,10 +21,15 @@ Ein moderner Discord-Bot zur Ticketverwaltung mit integrierter Web-Oberfläche u
   - Moderatoren-Schließen über Web
   - Audit-Log für alle geschlossenen Tickets
 
-##🔌 API (für externe Tools)
+## 🔌 API (für externe Tools)
 Authentifizierung erfolgt über einen API-Key im HTTP-Header:
-```Authorization: Bearer <TICKET_API_KEY>```
-Setze den Key in .env als:```TICKET_API_KEY=dein-geheimer-api-key```
+```
+Authorization: Bearer <TICKET_API_KEY>
+```
+Setze den Key in .env als:
+```
+TICKET_API_KEY=dein-geheimer-api-key
+```
  
 ## 🔒 Rollenrechte
 Nur User mit den Rollen in MOD_ROLE_IDS dürfen:
