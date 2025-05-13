@@ -6,20 +6,59 @@
 
 Ein moderner Discord-Bot zur Ticketverwaltung mit integrierter Web-Oberfläche und Audit-Logging.
 
-## 🚀 Features
+## ✨ Features
 
-- 🎟️ Ticket-Erstellung per Button in festem Channel
-- 🧵 Neuer Textkanal pro Ticket (`ticket-xxxxx`)
-- 🛡️ Moderatoren-Schließen über Button (nur mit definierter Rolle)
-- 🎙️ Sprachchannel-Erstellung (nur für berechtigte Rollen)
-- ✉️ Begrüßungstext beim Start (mit Saison- und Uhrzeit-basiertem Greeting)
-- 📎 Nachrichtenspeicherung mit Anhängen
-- ⏱ **Auto-Close nach Inaktivität** (24h ohne Nachricht)
-- 🌐 WebUI mit:
-  - Authentifizierung per Discord OAuth2
-  - Ticket-Anzeige + Verlauf
-  - Moderatoren-Schließen über Web
-  - Audit-Log für alle geschlossenen Tickets
+- 🎫 **Ticket-System in Discord**
+  - Button zum Erstellen im festgelegten Channel
+  - Automatische Channel-Erstellung mit UUID
+  - Benutzer kann direkt Fragen stellen
+  - Begrüßungstext per JS (`getGreeting()`)
+
+- 🎤 **Sprachkanal-Funktion**
+  - Mods oder definierte Rollen können per Button einen Voice-Channel erstellen
+  - Voice-Channel erhält den gleichen Namen wie das Ticket
+  - Wird automatisch gelöscht beim Schließen
+
+- 🔒 **Moderation**
+  - „Ticket schließen“-Button nur für Mods sichtbar
+  - Separate Nachricht für Moderatoren mit Rolle-Mention
+  - Audit-Log (`audit.log.jsonl`) speichert wer wann welches Ticket geschlossen hat
+
+- 🖥️ **WebUI mit Tailwind CSS**
+  - Übersicht über offene & bearbeitete Tickets
+  - Discord-Farben & Responsive Design
+  - Discord-Login via OAuth2 (Avatar + Name nach Login)
+  - Ticketverlauf inkl. Anhänge einsehbar im Modal
+  - Tickets per Button im Web schließen (nur Mods)
+  - Auto-Refresh alle 10 Sekunden
+  - Sound & Toast-Benachrichtigung bei neuen Tickets
+
+- 🔁 **Synchronisierung**
+  - Ticket wird beim Schließen im Web auch im Discord gelöscht (inkl. Voice)
+  - Änderungen an Tickets werden in `tickets.json` gespeichert
+
+- 📡 **REST-API (mit API-Key)**
+  - `GET /api/tickets` – alle offenen Tickets
+  - `GET /api/tickets/:id` – einzelnes Ticket
+  - `POST /api/tickets/:id/close` – Ticket schließen inkl. Discord-Löschung
+
+- ⚙️ **Konfiguration via `config.json` & `.env`**
+  - `modRoleIds`, `ticketCategoryId`, `ticketButtonChannelId`, `voiceSupportRoleIds`
+  - `.env`: Discord OAuth2-Keys, API-Key, Guild-ID
+
+- 🔔 **Benachrichtigungen**
+  - Ton beim Eingang neuer Tickets (auch bei Hintergrund-Tab)
+  - Visueller Toast unten rechts
+
+- 🧾 **Auditseite (`audit.html`)**
+  - Bearbeitete Tickets klickbar einsehbar
+  - Vollständiger Verlauf + Anhang-Vorschau
+  - Rücklink zur Hauptübersicht
+
+- 🔐 **Rechteverwaltung**
+  - WebUI nur für eingeloggte Mods sichtbar
+  - Logout bei fehlender Rolle
+
 
 ## 🔌 API (für externe Tools)
 Authentifizierung erfolgt über einen API-Key im HTTP-Header:
